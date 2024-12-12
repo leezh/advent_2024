@@ -27,4 +27,3 @@ for number, left_count in left_multiset.items():
     total_score += score
 
 print("Total:", total_score)
-

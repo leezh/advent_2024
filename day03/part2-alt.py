@@ -25,4 +25,3 @@ for section in code.split("do()"):
         total += int(parts[0]) * int(parts[1])
 
 print("Total:", total)
-

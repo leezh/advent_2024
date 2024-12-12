@@ -27,4 +27,3 @@ for left, right in zip(left_list, right_list):
     total_distance += distance
 
 print("Total:", total_distance)
-

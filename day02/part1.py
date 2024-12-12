@@ -13,8 +13,8 @@ with open(filename, "r", encoding="utf-8") as f:
         if not report:
             continue
         levels = [int(x) for x in report.split()]
-        directions = [a < b for a, b  in zip(levels[:-1], levels[1:])]
-        differences = [abs(a - b) for a, b  in zip(levels[:-1], levels[1:])]
+        directions = [a < b for a, b in zip(levels[:-1], levels[1:])]
+        differences = [abs(a - b) for a, b in zip(levels[:-1], levels[1:])]
         is_unsafe = False
         if len([d for d in differences if d < 1 or d > 3]) != 0:
             is_unsafe = True
@@ -25,4 +25,3 @@ with open(filename, "r", encoding="utf-8") as f:
         print(report, "Unsafe" if is_unsafe else "Safe")
 
 print("Safe Reports:", safe_reports)
-
